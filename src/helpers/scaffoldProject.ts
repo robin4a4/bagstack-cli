@@ -7,17 +7,21 @@ import { PKG_ROOT } from "../consts.js";
 import { execa } from "../utils/execAsync.js";
 import { type PackageManager } from "../utils/getUserPkgManager.js";
 import { logger } from "../utils/logger.js";
+import { AvailableFrameworks } from "../installers/index.js";
 
 // This bootstraps the base Next.js application
 export const scaffoldProject = async (
   projectName: string,
   projectDir: string,
-  pkgManager: PackageManager
+  pkgManager: PackageManager,
+  framework: AvailableFrameworks
 ) => {
-  const srcDir = path.join(PKG_ROOT, "template/base");
+  const srcDir = path.join(PKG_ROOT, `template/${framework}`);
 
   logger.info(`\nUsing: ${chalk.cyan.bold(pkgManager)}\n`);
-  const spinner = ora(`Scaffolding in: ${projectDir}...\n`).start();
+  const spinner = ora(
+    `Scaffolding in a ${framework} project: ${projectDir}...\n`
+  ).start();
 
   if (fs.existsSync(projectDir)) {
     if (fs.readdirSync(projectDir).length === 0) {

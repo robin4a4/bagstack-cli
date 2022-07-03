@@ -1,4 +1,8 @@
-import type { AvailablePackages } from "../installers/index.js";
+import {
+  availableFrameworks,
+  AvailableFrameworks,
+  AvailablePackages,
+} from "../installers/index.js";
 import chalk from "chalk";
 import { Command } from "commander";
 import inquirer from "inquirer";
@@ -9,12 +13,14 @@ import { validateAppName } from "../utils/validateAppName.js";
 
 interface CliResults {
   appName: string;
+  framework: AvailableFrameworks;
   packages: AvailablePackages[];
 }
 
 const defaultOptions: CliResults = {
   appName: DEFAULT_APP_NAME,
-  packages: ["prisma", "tailwind"],
+  framework: "react",
+  packages: ["prisma"],
 };
 
 export const runCli = async () => {
@@ -61,6 +67,18 @@ export const runCli = async () => {
       });
       cliResults.appName = appName;
     }
+
+    const { framework } = await inquirer.prompt<Pick<CliResults, "framework">>({
+      name: "framework",
+      type: "list",
+      message: "Which framework would you like to use?",
+      choices: availableFrameworks.map((framework) => ({
+        name: framework,
+        value: framework,
+      })),
+    });
+
+    cliResults.framework = framework;
 
     const { packages } = await inquirer.prompt<Pick<CliResults, "packages">>({
       name: "packages",
