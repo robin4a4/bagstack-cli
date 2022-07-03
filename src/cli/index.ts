@@ -4,7 +4,6 @@ import { Command } from "commander";
 import inquirer from "inquirer";
 import { BAGSTACK_CLI, DEFAULT_APP_NAME } from "../consts.js";
 import { availablePackages } from "../installers/index.js";
-// import { getVersion } from "../utils/getT3Version.js";
 import { logger } from "../utils/logger.js";
 import { validateAppName } from "../utils/validateAppName.js";
 
@@ -29,7 +28,6 @@ export const runCli = async () => {
       "[dir]",
       "The name of the application, as well as the name of the directory to create"
     )
-    // .version(getVersion(), "-v, --version", "Display the version number")
     .addHelpText(
       "afterAll",
       `\n The t3 stack was inspired by ${chalk

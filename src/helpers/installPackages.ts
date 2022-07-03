@@ -8,7 +8,7 @@ import { logger } from "../utils/logger.js";
 export const installPackages = async (
   projectDir: string,
   pkgManager: PackageManager,
-  packages: PkgInstallerMap,
+  packages: PkgInstallerMap
 ) => {
   logger.info("Installing packages...");
 
@@ -17,7 +17,7 @@ export const installPackages = async (
       const spinner = ora(`Installing ${name}...`).start();
       await opts.installer(projectDir, pkgManager, packages);
       spinner.succeed(
-        chalk.green(`Successfully installed ${chalk.green.bold(name)}`),
+        chalk.green(`Successfully installed ${chalk.green.bold(name)}`)
       );
     }
   }

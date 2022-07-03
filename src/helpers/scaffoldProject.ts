@@ -12,7 +12,7 @@ import { logger } from "../utils/logger.js";
 export const scaffoldProject = async (
   projectName: string,
   projectDir: string,
-  pkgManager: PackageManager,
+  pkgManager: PackageManager
 ) => {
   const srcDir = path.join(PKG_ROOT, "template/base");
 
@@ -22,7 +22,7 @@ export const scaffoldProject = async (
   if (fs.existsSync(projectDir)) {
     if (fs.readdirSync(projectDir).length === 0) {
       spinner.info(
-        `${chalk.cyan.bold(projectName)} exists but is empty, continuing...\n`,
+        `${chalk.cyan.bold(projectName)} exists but is empty, continuing...\n`
       );
     } else {
       spinner.stopAndPersist();
@@ -31,17 +31,19 @@ export const scaffoldProject = async (
           name: "overwriteDir",
           type: "confirm",
           message: `${chalk.redBright.bold("Warning:")} ${chalk.cyan.bold(
-            projectName,
+            projectName
           )} already exists and isn't empty. Do you want to overwrite it?`,
           default: false,
-        },
+        }
       );
       if (!overwriteDir) {
         spinner.fail("Aborting installation...");
         process.exit(0);
       } else {
         spinner.info(
-          `Emptying ${chalk.cyan.bold(projectName)} and creating t3 app..\n`,
+          `Emptying ${chalk.cyan.bold(
+            projectName
+          )} and creating bagstack app..\n`
         );
         fs.emptyDirSync(projectDir);
       }

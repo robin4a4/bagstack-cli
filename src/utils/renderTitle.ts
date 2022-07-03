@@ -12,7 +12,7 @@ const poimandresTheme = {
 };
 
 export const renderTitle = () => {
-  const text = figlet.textSync("CREATE T3 APP", { font: "Small" });
-  const t3Gradient = gradient(Object.values(poimandresTheme));
-  console.log(t3Gradient.multiline(text));
+  const text = figlet.textSync("BAGSTACK-CLI", { font: "Small" });
+  const cliGradient = gradient(Object.values(poimandresTheme));
+  console.log(cliGradient.multiline(text));
 };
