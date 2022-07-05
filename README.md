@@ -18,11 +18,18 @@ Interactive CLI to quickly set up a project, heavely inspired by <a href="https:
 
 # The stack
 
-It consists of
+It consists of:
 
-- [Next.js](https://nextjs.org)
+- React
+- svelte
+
+running by default with:
+
 - [TailwindCSS](https://tailwindcss.com)
 - [TypeScript](https://typescriptlang.org)
+
+with opt-in such as:
+
 - [Prisma](https://prisma.io)
 
 </div>
