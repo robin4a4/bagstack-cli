@@ -18,7 +18,7 @@ Interactive CLI to quickly set up a project, heavely inspired by <a href="https:
 
 # The stack
 
-It consists of:
+It consists of a selection of frameworks:
 
 - React
 - svelte

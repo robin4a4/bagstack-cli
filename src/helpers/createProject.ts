@@ -6,7 +6,7 @@ import type {
 import { getUserPkgManager } from "../utils/getUserPkgManager.js";
 import { installPackages } from "./installPackages.js";
 import { scaffoldProject } from "./scaffoldProject.js";
-import { selectIndexFile } from "./selectBoilerplate.js";
+import { addTailwindcssConfig } from "./addCommonConfigs.js";
 
 export const createProject = async (
   projectName: string,
@@ -22,7 +22,7 @@ export const createProject = async (
   // Install the selected packages
   await installPackages(projectDir, pkgManager, packages);
 
-  // await selectIndexFile(projectDir);
+  await addTailwindcssConfig(projectDir);
 
   return projectDir;
 };

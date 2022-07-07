@@ -7,10 +7,10 @@ import { prismaInstaller } from "./prisma.js";
 export const availablePackages = ["prisma"] as const;
 export const availableFrameworks = [
   "react",
-  "nextjs",
-  "solid",
+  // "nextjs",
+  // "solid",
   "svelte",
-  "sveltekit",
+  // "sveltekit",
 ];
 export type AvailablePackages = typeof availablePackages[number];
 

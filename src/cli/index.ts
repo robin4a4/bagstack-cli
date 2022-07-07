@@ -29,20 +29,12 @@ export const runCli = async () => {
   const program = new Command().name(BAGSTACK_CLI);
 
   program
-    .description("A CLI for creating web applications with the t3 stack")
+    .description(
+      "Interactive CLI to quickly set up a project, heavely inspired by create-t3-app"
+    )
     .argument(
       "[dir]",
       "The name of the application, as well as the name of the directory to create"
-    )
-    .addHelpText(
-      "afterAll",
-      `\n The t3 stack was inspired by ${chalk
-        .hex("#E8DCFF")
-        .bold(
-          "@t3dotgg"
-        )} and has been used to build awesome fullstack applications like ${chalk
-        .hex("#E24A8D")
-        .underline("https://ping.gg")} \n`
     )
     .parse(process.argv);
 
