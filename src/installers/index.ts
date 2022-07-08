@@ -1,14 +1,15 @@
 import type { PackageManager } from "../utils/getUserPkgManager.js";
 
 import { prismaInstaller } from "./prisma.js";
+import { vitestInstaller } from "./vitest.js";
 
 // Turning this into a const allows the list to be iterated over for programatically creating prompt options
 // Should increase extensability in the future
-export const availablePackages = ["prisma"] as const;
+export const availablePackages = ["prisma", "vitest"] as const;
 export const availableFrameworks = [
   "react",
   // "nextjs",
-  // "solid",
+  "solid",
   "svelte",
   // "sveltekit",
 ];
@@ -35,5 +36,9 @@ export const buildPkgInstallerMap = (
   prisma: {
     inUse: packages.includes("prisma"),
     installer: prismaInstaller,
+  },
+  vitest: {
+    inUse: packages.includes("vitest"),
+    installer: vitestInstaller,
   },
 });

@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development vite",
     "build": "vite build",
+    "serve": "vite preview",
     "lint": "npx eslint src/**"
   },
   "devDependencies": {
@@ -23,5 +24,6 @@
     "typescript": "^4.5.5",
     "vite": "^2.9.12"
   },
-  "pre-commit": "lint"
+  "pre-commit": "lint",
+  "license": "MIT"
 }

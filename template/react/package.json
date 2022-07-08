@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "serve": "vite preview",
     "lint": "npx eslint src/**"
   },
   "dependencies": {
@@ -28,5 +29,6 @@
     "typescript": "^4.5.5",
     "vite": "^2.9.12"
   },
-  "pre-commit": "lint"
+  "pre-commit": "lint",
+  "license": "MIT"
 }
