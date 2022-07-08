@@ -11,8 +11,13 @@ export const initializeGit = async (projectDir: string) => {
   const spinner = ora("Creating a new git repo...\n").start();
   try {
     await execa("git init --initial-branch=main", { cwd: projectDir });
+    await execa("npm install commitizen", { cwd: projectDir });
+    await execa(
+      "commitizen init cz-conventional-changelog --save-dev --save-exact",
+      { cwd: projectDir }
+    );
     spinner.succeed(
-      `${chalk.green("Successfully initialized")} ${chalk.green.bold("git")}\n`,
+      `${chalk.green("Successfully initialized")} ${chalk.green.bold("git")}\n`
     );
   } catch (error) {
     spinner.fail(`${chalk.bold.red("Failed:")} could not initialize git\n`);
@@ -20,6 +25,6 @@ export const initializeGit = async (projectDir: string) => {
 
   await fs.rename(
     path.join(projectDir, "_gitignore"),
-    path.join(projectDir, ".gitignore"),
+    path.join(projectDir, ".gitignore")
   );
 };

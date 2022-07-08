@@ -1,13 +1,10 @@
 {
-  "name": "bagstack react",
-  "version": "0.0.0",
+  "name": "bagstack-react",
+  "version": "0.1.0",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "serve": "vite preview",
-    "lint:fix": "eslint ./src --ext .jsx,.js,.ts,.tsx --quiet --fix --ignore-path ./.gitignore",
-    "lint": "yarn lint:format && yarn lint:fix ",
-    "type-check": "tsc"
+    "lint": "npx eslint src/**"
   },
   "dependencies": {
     "react": "^17.0.2",
@@ -31,6 +28,5 @@
     "typescript": "^4.5.5",
     "vite": "^2.9.12"
   },
-  "pre-commit": "lint",
-  "license": "MIT"
+  "pre-commit": "lint"
 }
