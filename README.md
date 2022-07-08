@@ -21,7 +21,8 @@ Interactive CLI to quickly set up a project, heavely inspired by <a href="https:
 It consists of a selection of frameworks:
 
 - React
-- svelte
+- Svelte
+- Solid
 
 running by default with:
 
@@ -31,6 +32,7 @@ running by default with:
 with opt-in such as:
 
 - [Prisma](https://prisma.io)
+- [Vitest](https://vitest.dev)
 
 </div>
 

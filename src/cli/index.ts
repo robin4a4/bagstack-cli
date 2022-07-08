@@ -1,13 +1,12 @@
+import { Command } from "commander";
+import inquirer from "inquirer";
+import { BAGSTACK_CLI, DEFAULT_APP_NAME } from "../consts.js";
 import {
   availableFrameworks,
   AvailableFrameworks,
   AvailablePackages,
+  availablePackages,
 } from "../installers/index.js";
-import chalk from "chalk";
-import { Command } from "commander";
-import inquirer from "inquirer";
-import { BAGSTACK_CLI, DEFAULT_APP_NAME } from "../consts.js";
-import { availablePackages } from "../installers/index.js";
 import { logger } from "../utils/logger.js";
 import { validateAppName } from "../utils/validateAppName.js";
 
@@ -64,9 +63,9 @@ export const runCli = async () => {
       name: "framework",
       type: "list",
       message: "Which framework would you like to use?",
-      choices: availableFrameworks.map((framework) => ({
-        name: framework,
-        value: framework,
+      choices: availableFrameworks.map((availableFramework) => ({
+        name: availableFramework,
+        value: availableFramework,
       })),
     });
 

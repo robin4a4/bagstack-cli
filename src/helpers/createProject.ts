@@ -1,12 +1,12 @@
-import path from "path";
 import type {
   AvailableFrameworks,
   PkgInstallerMap,
 } from "../installers/index.js";
+import path from "path";
 import { getUserPkgManager } from "../utils/getUserPkgManager.js";
+import { addTailwindcssConfig } from "./addCommonConfigs.js";
 import { installPackages } from "./installPackages.js";
 import { scaffoldProject } from "./scaffoldProject.js";
-import { addTailwindcssConfig } from "./addCommonConfigs.js";
 
 export const createProject = async (
   projectName: string,

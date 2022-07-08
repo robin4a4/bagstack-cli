@@ -1,5 +1,4 @@
 import type { PackageManager } from "../utils/getUserPkgManager.js";
-
 import { prismaInstaller } from "./prisma.js";
 import { vitestInstaller } from "./vitest.js";
 
