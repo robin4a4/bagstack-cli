@@ -26,7 +26,7 @@ It consists of a selection of frameworks:
 
 running by default with:
 
-- [TailwindCSS](https://tailwindcss.com)
+- [TailwindCSS](https://tailwindcss.com) with an opinionated [config file](https://github.com/robin4a4/tailwind-config)
 - [TypeScript](https://typescriptlang.org)
 
 with opt-in such as:
