@@ -12,7 +12,11 @@
     "bagstack-cli",
     "tailwind",
     "prisma",
-    "typescript"
+    "typescript",
+    "vitest",
+    "react",
+    "svelte",
+    "solidjs"
   ],
   "type": "module",
   "exports": "./dist/index.js",
