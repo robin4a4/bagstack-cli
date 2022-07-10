@@ -1,7 +1,7 @@
 {
   "name": "bagstack-cli",
-  "version": "0.0.1",
-  "description": "Create web application with the Bagstack",
+  "version": "1.0.1",
+  "description": "Quickly scaffold a modern web app using the Bagstack: Typescript, tailwind, and modern javascript framworks.",
   "author": "Robin Marillia <robin4a4@gmail.com>",
   "license": "MIT",
   "repository": {
