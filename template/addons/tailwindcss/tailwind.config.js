@@ -9,7 +9,9 @@ module.exports = {
         4: "4px",
         8: "8px",
         12: "12px",
+        14: "14px",
         16: "16px",
+        20: "20px",
         24: "24px",
         32: "32px",
         40: "40px",
@@ -26,6 +28,7 @@ module.exports = {
       fontSize: {
         8: "8px",
         12: "12px",
+        14: "14px",
         16: "16px",
         24: "24px",
         32: "32px",
@@ -38,20 +41,6 @@ module.exports = {
         DEFAULT: "4px",
         md: "8px",
         full: "9999px",
-      },
-      animation: {
-        slideIn: "slideIn .2s ease-in-out",
-        slideOut: "slideOut .2s ease-in-out",
-      },
-      keyframes: {
-        slideIn: {
-          "0%": { transform: "translateX(100%)" },
-          "100%": { transform: "translateX(0)" },
-        },
-        slideOut: {
-          "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(100%)" },
-        },
       },
     },
   },
